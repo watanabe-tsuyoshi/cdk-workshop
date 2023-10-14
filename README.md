@@ -6,9 +6,21 @@
 そうしないと、今まで通ってたテストケースが通らないことがある
 
 ②デプロイ先のエンドポイントはlibではなくbinで定義されておりそちらを変更する必要がある
+const app = new cdk.App();
+new WorkshopPipelineStack(app, 'CdkWorkshopPipelineStack');
+git config --global credential.UseHttpPath true
 
-③
+③IAMユーザが作れないかつSSOユーザの認証情報が使える場合
+認証情報設定
+↓
+git config --global credential.helper '!aws codecommit credential-helper $@'
+git config --global credential.UseHttpPath true
+↓
+cloneなりremote addからのpushするなりができる
 
+参考：
+https://qiita.com/atsumjp/items/1fbd6aae3c8c00d62610
+https://docs.aws.amazon.com/ja_jp/codecommit/latest/userguide/setting-up-https-unixes.html
 
 # Welcome to your CDK TypeScript project
 
