@@ -1,3 +1,15 @@
+# ポイント
+①ある処理を追加した際に、他のテストケースへ影響する点に注意
+例：
+指定不要だったパラメータを必須にする処理へ変更した
+今まで、パタメータを指定していなかったテストケースでパラメータを追加する必要がある
+そうしないと、今まで通ってたテストケースが通らないことがある
+
+②デプロイ先のエンドポイントはlibではなくbinで定義されておりそちらを変更する必要がある
+
+③
+
+
 # Welcome to your CDK TypeScript project
 
 You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`CdkWorkshopStack`)
