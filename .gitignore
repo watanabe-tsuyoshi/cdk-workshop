@@ -1,4 +1,3 @@
-*.js
 !jest.config.js
 ！lambda/*.js
 *.d.ts
