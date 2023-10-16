@@ -25,7 +25,6 @@ export class CdkWorkshopStack extends cdk.Stack {
     const gateway = new apigw.LambdaRestApi(this, 'Endpoint', {
       handler: helloWithCounter.handler
     });
-    
     const tv = new TableViewer(this, 'ViewHitCounter', {
       title: 'Hello Hits',
       table: helloWithCounter.table,
